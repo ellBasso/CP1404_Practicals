@@ -21,8 +21,7 @@ def result_calculation(score):
 def main():
     # score = random.randint(0, 100) # test the system using random variables
     score = float(input("Enter score: "))
-    result = result_calculation(score)
-    print(result)
+    print(result_calculation(score))
 
 
 main()

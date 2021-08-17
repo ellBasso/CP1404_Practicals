@@ -6,7 +6,7 @@ The score must be between 0 and 100 inclusive; 90 or more is excellent; 50 or mo
 import random
 
 
-def result_calculation(score):
+def determine_achievement(score):
     if score < 0 or score > 100:
         result = "Invalid score"
     elif score >= 90:
@@ -21,7 +21,7 @@ def result_calculation(score):
 def main():
     # score = random.randint(0, 100) # test the system using random variables
     score = float(input("Enter score: "))
-    print(result_calculation(score))
+    print(determine_achievement(score))
 
 
 main()

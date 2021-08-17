@@ -16,8 +16,8 @@ MAX_PRICE = 1000.0
 INITIAL_PRICE = 10.0
 Day_Number = 0
 
-OUTPUT_FILE = 'log.txt'
-out_file = open(OUTPUT_FILE, 'w')
+OUTPUT_FILENAME = 'log.txt'
+out_file = open(OUTPUT_FILENAME, 'w')
 
 
 price = INITIAL_PRICE

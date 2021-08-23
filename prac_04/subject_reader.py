@@ -7,23 +7,33 @@ FILENAME = "subject_data.txt"
 
 
 def main():
+    """Main running function of the python script"""
     data = get_data()
-    print(data)
+    print_data(data)
 
 
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
+    data_readable_list = []
     for line in input_file:
-        print(line)  # See what a line looks like
-        print(repr(line))  # See what a line really looks like
+        # print(line)  # See what a line looks like
+        # print(repr(line))  # See what a line really looks like
         line = line.strip()  # Remove the \n
         parts = line.split(',')  # Separate the data into its parts
-        print(parts)  # See what the parts look like (notice the integer is a string)
+        # print(parts)  # See what the parts look like (notice the integer is a string)
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
-        print(parts)  # See if that worked
-        print("----------")
+        # print(parts)  # See if that worked
+        data_readable_list.append(parts)
+        # print("----------")
     input_file.close()
+    return data_readable_list
+
+
+def print_data(data):
+    """Will print the data in an easily readable form"""
+    for subject_data in data:
+        print("{} is taught by {:12} and has {:4} students.".format(*subject_data))
 
 
 main()

@@ -5,8 +5,11 @@ Write a program that prompts the user for 5 numbers and then stores each of thes
 
 def main():
     """Main function to run upon script being ran"""
-    numbers = input_numbers()
-    number_calculations(numbers)
+    if credentials_check() is True:
+        numbers = input_numbers()
+        number_calculations(numbers)
+    else:
+        pass
 
 
 def input_numbers():
@@ -26,6 +29,18 @@ def number_calculations(numbers):
     print("The smallest number is {}".format(min(numbers)))
     print("The largest number is {}".format(max(numbers)))
     print("The average of the numbers is {}".format((sum(numbers)) / (len(numbers))))
+
+
+def credentials_check():
+    usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
+                 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',
+                 'bob']
+    username = input(str("Please enter your username: "))
+    if username in usernames:
+        print("Access Granted")
+        return True
+    else:
+        print("Access Denied")
 
 
 main()

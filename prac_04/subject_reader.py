@@ -9,7 +9,8 @@ FILENAME = "subject_data.txt"
 def main():
     """Main running function of the python script"""
     data = get_data()
-    print_data(data)
+    for subject_data in data:
+        print("{} is taught by {:12} and has {:4} students.".format(*subject_data))
 
 
 def get_data():
@@ -28,12 +29,6 @@ def get_data():
         # print("----------")
     input_file.close()
     return data_readable_list
-
-
-def print_data(data):
-    """Will print the data in an easily readable form"""
-    for subject_data in data:
-        print("{} is taught by {:12} and has {:4} students.".format(*subject_data))
 
 
 main()

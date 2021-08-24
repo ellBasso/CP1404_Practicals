@@ -5,7 +5,7 @@ Write a program that prompts the user for 5 numbers and then stores each of thes
 
 def main():
     """Main function to run upon script being ran"""
-    if verified_user() is True:
+    if verified_user():
         numbers = requested_numbers()
         calculations(numbers)
 

@@ -24,7 +24,7 @@ numbers[-1] = 1
 print(numbers[2:])
 
 """Check if 9 is an element of numbers"""
-if (9 in numbers) is True:
+if 9 in numbers:
     element_status = "is"
 else:
     element_status = "isn't"

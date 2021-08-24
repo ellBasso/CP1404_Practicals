@@ -5,12 +5,12 @@ Write a program that prompts the user for 5 numbers and then stores each of thes
 
 def main():
     """Main function to run upon script being ran"""
-    if credentials_check() is True:
-        numbers = input_numbers()
-        number_calculations(numbers)
+    if verified_user() is True:
+        numbers = requested_numbers()
+        calculations(numbers)
 
 
-def input_numbers():
+def requested_numbers():
     """Asks the user for the numbers they want to use for later calculations"""
     numbers = []
     count_of_numbers = 5
@@ -20,7 +20,7 @@ def input_numbers():
     return numbers
 
 
-def number_calculations(numbers):
+def calculations(numbers):
     """Print all of the numerical calculations"""
     print("The first number is {}".format(numbers[0]))
     print("The last number is {}".format(numbers[-1]))
@@ -29,7 +29,7 @@ def number_calculations(numbers):
     print("The average of the numbers is {}".format((sum(numbers)) / (len(numbers))))
 
 
-def credentials_check():
+def verified_user():
     """Checks to ensure username entered is in the username list"""
     usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
                  'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',

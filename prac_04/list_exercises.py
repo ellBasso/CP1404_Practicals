@@ -8,8 +8,6 @@ def main():
     if credentials_check() is True:
         numbers = input_numbers()
         number_calculations(numbers)
-    else:
-        pass
 
 
 def input_numbers():
@@ -32,6 +30,7 @@ def number_calculations(numbers):
 
 
 def credentials_check():
+    """Checks to ensure username entered is in the username list"""
     usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
                  'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',
                  'bob']

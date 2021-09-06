@@ -4,11 +4,12 @@
 class Car:
     """Represent a Car object."""
 
-    def __init__(self, fuel=0):
+    def __init__(self, name, fuel=0):
         """Initialise a Car instance.
 
         fuel: float, one unit of fuel drives one kilometre
         """
+        self.name = name
         self.fuel = fuel
         self.odometer = 0
 
@@ -29,3 +30,10 @@ class Car:
             self.fuel -= distance
         self.odometer += distance
         return distance
+
+    """Now add the __str__ method to the Car class in car.py.
+    Using {} string formatting, have it return a string in the following format:
+    Car, fuel=42, odometer=277"""
+
+    def __str__(self, name="", fuel=0, odometer=0):
+        return f"{self.name}, fuel={self.fuel}, odometer={self.odometer}"

@@ -5,7 +5,6 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
-        """Gibson L-5 CES (1922) : $16,035.40"""
         return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
     def get_age(self):

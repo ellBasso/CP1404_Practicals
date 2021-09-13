@@ -31,9 +31,5 @@ class Car:
         self.odometer += distance
         return distance
 
-    """Now add the __str__ method to the Car class in car.py.
-    Using {} string formatting, have it return a string in the following format:
-    Car, fuel=42, odometer=277"""
-
     def __str__(self, name="", fuel=0, odometer=0):
         return f"{self.name}, fuel={self.fuel}, odometer={self.odometer}"

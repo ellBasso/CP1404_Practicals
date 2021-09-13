@@ -5,6 +5,19 @@ from prac_06.guitar import Guitar
 
 
 def main():
+    guitars = get_guitars()
+    print("These are my guitars:")
+    count = 0
+    for guitar in guitars:
+        if guitar.is_vintage():
+            vintage_string = "(vintage)"
+        else:
+            vintage_string = ""
+        print(f"Guitar {count + 1}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10,.2f} {vintage_string}")
+        count += 1
+
+
+def get_guitars():
     guitars = []
     print("My guitars!")
     name = input("Name: ")
@@ -15,15 +28,7 @@ def main():
         guitars.append(guitar_to_add)
         print(f"{guitar_to_add} added.")
         name = input("Name: ")
-    print("These are my guitars:")
-    count = 0
-    for guitar in guitars:
-        if guitar.is_vintage():
-            vintage_string = "(vintage)"
-        else:
-            vintage_string = ""
-        print(f"Guitar {count + 1}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10,.2f} {vintage_string}")
-        count += 1
+    return guitars
 
 
 main()

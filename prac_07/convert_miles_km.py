@@ -16,5 +16,11 @@ class MilesConverter(App):
         miles = float(self.root.ids.miles_input.text)
         self.root.ids.conversion_label.text = str(miles * MILES_CONVERSION)
 
+    def handle_increment(self, incr):
+        increment = int(incr)
+        miles = float(self.root.ids.miles_input.text)
+        self.root.ids.miles_input.text = str(miles + increment)
+        self.convert_miles()
+
 
 MilesConverter().run()

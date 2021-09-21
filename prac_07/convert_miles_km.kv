@@ -10,9 +10,11 @@ BoxLayout:
             orientation: 'vertical'
             size_hint_x: 0.25
             Button:
+                on_press: app.handle_increment(+1)
                 text: 'Up'
                 font_size: 48
             Button:
+                on_press: app.handle_increment(-1)
                 text: 'Down'
                 font_size: 48
     Button:

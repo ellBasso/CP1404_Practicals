@@ -3,6 +3,7 @@ BoxLayout:
     BoxLayout:
         orientation: 'horizontal'
         TextInput:
+            on_text: app.convert_miles()
             id: miles_input
             text: '34.0'
             font_size: 48
@@ -17,10 +18,6 @@ BoxLayout:
                 on_press: app.handle_increment(-1)
                 text: 'Down'
                 font_size: 48
-    Button:
-        font_size: 48
-        text: 'Convert Miles to Kilometers'
-        on_press: app.convert_miles()
     Label:
         id: conversion_label
         text: "54.717"

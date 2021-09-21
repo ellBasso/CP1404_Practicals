@@ -6,7 +6,7 @@ class BoxLayoutDemo(App):
     def build(self):
         """Create box layout window"""
         self.title = "Greeting program"
-        self.root = Builder.load_file('box_layout.kv')
+        self.root = Builder.load_file('box_layout_greeting.kv')
         return self.root
 
     def handle_greet(self):

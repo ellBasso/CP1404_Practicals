@@ -17,5 +17,6 @@ class SilverServiceTaxi(Taxi):
 
     def __str__(self):
         """Return string content for the class"""
-        return f"{self.name}, fuel={self.fuel}, odo={self.odometer}, {self.current_fare_distance}km on current fare, " \
+        return f"{self.name}, fuel={self.fuel}, odometer={self.odometer}, " \
+               f"{self.current_fare_distance}km on current fare, " \
                f"${self.price_per_km:.2f}/km plus a flagfall of ${self.flagfall:.2f}"

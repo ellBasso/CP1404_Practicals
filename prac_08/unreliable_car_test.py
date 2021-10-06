@@ -1,7 +1,10 @@
 from prac_08.unreliable_car import UnreliableCar
 
-bomb = UnreliableCar("Bomb", 100, 30)
-print(f"The bad car drive {bomb.drive(20)}km")
-
 corolla = UnreliableCar("Beast", 100, 100)
-print(f"The Corolla drove {corolla.drive(100)}km")
+
+bomb = UnreliableCar("Bomb", 100, 30)
+for i in range(1, 20):
+    """Both cars should only drive 100km due to range constraints.
+    The bomb shouldn't drive every time."""
+    print(f"The Corolla drove {corolla.drive(100)}km")
+    print(f"The bad car drive {bomb.drive(20)}km")

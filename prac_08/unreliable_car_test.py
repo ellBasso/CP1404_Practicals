@@ -8,3 +8,5 @@ for i in range(1, 20):
     The bomb shouldn't drive every time."""
     print(f"The Corolla drove {corolla.drive(100)}km")
     print(f"The bad car drive {bomb.drive(20)}km")
+    print(bomb)
+    print(corolla)

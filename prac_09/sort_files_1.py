@@ -21,5 +21,13 @@ def main():
         except IndexError:
             pass
 
+    # Move each file into suitable directory based on its file extension
+    for file in os.listdir('.'):
+        if os.path.isfile(file):
+            file_extension = (file.split('.'))[1]
+            file_destination = os.path.join(file_extension, file)
+            print(file_destination)
+            shutil.move(file, file_destination)
+
 
 main()

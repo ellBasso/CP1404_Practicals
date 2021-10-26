@@ -1,8 +1,12 @@
+"""Let the user categorise different extensions
+as the program encounters these, then move them all into those subdirectories"""
 import shutil
 import os
 
 
 def main():
+    """Sort through files in starting directory and prompt user for a folder
+     name based on unique file extensions"""
     print("Starting directory is: {}".format(os.getcwd()))
 
     # Change to desired directory

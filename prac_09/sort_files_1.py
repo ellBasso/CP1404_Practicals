@@ -1,8 +1,12 @@
+"""Create a directory with for each new extension that the program finds"""
+
 import shutil
 import os
 
 
 def main():
+    """Set the starting directory and sort through file extensions, create a folder for each type
+    then move them into the appropriately named folder based on file extension"""
     print("Starting directory is: {}".format(os.getcwd()))
 
     # Change to desired directory

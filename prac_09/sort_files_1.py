@@ -18,8 +18,9 @@ def main():
     # Create folders for filename extensions
     for file in os.listdir('.'):
         try:
-            os.mkdir((file.split('.'))[1])
-            print("Made folder {}".format((file.split('.'))[1]))
+            extension = file.split('.')[1]
+            os.mkdir(extension)
+            print("Made folder {}".format(extension))
         except FileExistsError:
             pass
         except IndexError:
